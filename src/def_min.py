@@ -8,5 +8,6 @@ def min (list):
         if list[i]<min:
             min=list[i]
     return min
-#m=min([2,3,1])
-#print(m)
+if __name__ == "__main__":
+    m=min([2,3,1])
+    print(m)

@@ -5,14 +5,14 @@ import xlwt #写入excel文件
 from xlutils.copy import copy #写入excel文件
 import def_read_excel
 import def_paixu
-import def_chazhi
+import def_quchazhi
 import def_write_excel
 import def_shuju
 
 read_excel=def_read_excel.read_excel
 write_excel=def_write_excel.write_excel
 paixu=def_paixu.paixu
-chazhi=def_chazhi.chazhi
+chazhi=def_quchazhi.chazhi
 shuju=def_shuju.shuju
 
 #一年数据

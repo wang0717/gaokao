@@ -12,6 +12,6 @@ def chazhi(list1,list2,t):
     y=abs(a[t]-b[t])    #与平
     z=abs(a[t]-b[t+1])  #与下
     return [x,y,z]
-
-#m=chazhi([23,22,21,20,19],[22,21,20,19,18],1)
-#print(m)
+if __name__ == "__main__":
+    m=chazhi([23,22,21,20,19],[22,21,20,19,18],1)
+    print(m)

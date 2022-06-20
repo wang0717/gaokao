@@ -4,24 +4,18 @@ import xlrd ##读取excel文件
 import xlwt ##写入excel文件
 from xlutils.copy import copy #写入excel文件
    #打开需要修改的excel文件
-old_excel = xlrd.open_workbook(r'B:\20.xls', formatting_info=True)
+old_excel = xlrd.open_workbook(r'/Users/admins/Desktop/a.xlsx', formatting_info=True)
     
 # 将操作文件对象拷贝，变成可写的workbook对象  
 new_excel = copy(old_excel)
 def write(my_num,my_list1,my_list2,my_list3):
- 
-    
-    num=my_num
-    shuju1=my_list1
-    shuju2=my_list2
-    shuju3=my_list3
-    ws = new_excel.get_sheet(num)
-    long=min(len(shuju1),len(shuju2))
+    ws = new_excel.get_sheet(my_num)
+    long=min(len(my_list1),len(my_list2))
     t=0  
     while t<long :
-        ws.write(t+1, 0, shuju1[t])  
-        ws.write(t+1, 1, shuju2[t])  
-        ws.write(t+1, 2, shuju3[t])  
+        ws.write(t+1, 0, my_list1[t])
+        ws.write(t+1, 1, my_list2[t])
+        ws.write(t+1, 2, my_list3[t])
         t=t+1
         
 def write_excel(list1,list2,list3,list4,list5,txt):
@@ -41,5 +35,6 @@ def write_excel(list1,list2,list3,list4,list5,txt):
     #ws.write(2,3,4)
     
     #重新保存为新excel
-    new_excel.save('B:\%s.xls'%q)
+    new_excel.save('/Users/admins/Desktop/\%s.xlsx'%q)
+
     print("写入Excel表成功")
